@@ -1,0 +1,1 @@
+<p>Untuk membuat thread baru dengan mengklik <red>New Thread</red></p>

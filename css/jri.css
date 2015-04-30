@@ -1,0 +1,30 @@
+/* ================================ */
+  /* @copyright 2014 Imam Magribi    */
+/* ================================ */
+.block-content{
+
+width:100%;
+height:665px !important;
+float:left;
+display:inline-block;
+position:relative;
+}
+
+#formDeleteMessage tbody tr td{
+cursor:pointer;
+
+}
+/* ==================================================
+				ini digunakan untuk selected image by kcfinder
+================================================== */				
+#image {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #000;
+    color: #fff;
+}
+#image img {
+    visibility: hidden;
+}

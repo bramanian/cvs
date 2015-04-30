@@ -1,0 +1,28 @@
+.form-login{
+	display:inline-block;
+	position:relative;
+	width:550px;
+	height:auto;
+	background:#EEEEEE;
+	border-radius:5px;
+	padding-top:30px;
+	padding-bottom:20px;
+	-webkit-box-shadow: 0px 0px 13px -1px rgba(217,217,217,1);
+	-moz-box-shadow: 0px 0px 13px -1px rgba(217,217,217,1);
+	box-shadow: 0px 0px 13px -1px rgba(217,217,217,1);
+    left:50%;
+	top:50%;
+	margin-left:-277px;
+	margin-top:124px;
+}
+.btn-facebook{
+background:#3C599B;
+color:white;
+}
+.btn-twitter{
+background:#34CCFE;
+color:white;
+}
+body{
+background:#F6E60D;
+}

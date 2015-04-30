@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ADMIN - VEGAS-INDONESIA</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Add custom CSS here -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!--ck editor -->
+
+	<script src="jquery-1.11.1.js"></script>
+	<script src="ckeditor/ckeditor.js"></script>
+	<script src="ckeditor/adapters/jquery.js"></script>
+	<link href="ckeditor/sample/sample.css" rel="stylesheet">
+
+<!-- end ck editor -->
+  </head>
+
+  <body style="background:#ffffff url('img/bg_1.png');">
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a class="navbar-brand" style=" text-transform: uppercase;" href="#">Selamat Datang Imam</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav side-nav">
+            <li class="active"><a href="#page-wrapper"><i class="fa fa-th-list"></i> Tentang</a></li>
+            <li><a href="#page-wrapper"><i class="fa fa-hdd-o"></i> Vidio</a></li>
+            <li><a href="#page-wrapper"><i class="fa fa-music"></i> Lagu</a></li>
+            <li><a href="#page-wrapper"><i class="fa fa-picture-o"></i> Gambar</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-caret-square-o-down"></i> Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Dropdown Item</a></li>
+                <li><a href="#">Another Item</a></li>
+                <li><a href="#">Third Item</a></li>
+                <li><a href="#">Last Item</a></li>
+              </ul>
+            </li>
+            <li><a href="#" ><i  style="float: right" class="fa fa-arrow-circle-left"></i> &nbsp;</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right navbar-user">
+            <li class="dropdown messages-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> Messages <span class="badge">7</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li class="dropdown-header">7 New Messages</li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li class="message-preview">
+                  <a href="#">
+                    <span class="avatar"><img src="http://placehold.it/50x50"></span>
+                    <span class="name">John Smith:</span>
+                    <span class="message">Hey there, I wanted to ask you something...</span>
+                    <span class="time"><i class="fa fa-clock-o"></i> 4:34 PM</span>
+                  </a>
+                </li>
+                <li class="divider"></li>
+                <li><a href="#">View Inbox <span class="badge">7</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown alerts-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> Alerts <span class="badge">3</span> <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Default <span class="label label-default">Default</span></a></li>
+                <li><a href="#">Primary <span class="label label-primary">Primary</span></a></li>
+                <li><a href="#">Success <span class="label label-success">Success</span></a></li>
+                <li><a href="#">Info <span class="label label-info">Info</span></a></li>
+                <li><a href="#">Warning <span class="label label-warning">Warning</span></a></li>
+                <li><a href="#">Danger <span class="label label-danger">Danger</span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">View All</a></li>
+              </ul>
+            </li>
+            <li class="dropdown user-dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
+                <li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </nav>
+
+      <div id="page-wrapper" >
+
+        <div class="row" >
+            <div class="col-lg-12" >
+             <form role="form">
+  <div class="form-group">
+    <label for="judul">JUDUL</label>
+    <input type="text" class="form-control" id="JUDUl" placeholder="MASUKKAN JUDUL">
+  </div>
+                 <div class="form-group">
+<textarea cols="80" id="editor1" name="editor1" rows="10">
+			&lt;h2&gt;Technical details &lt;a id=&quot;tech-details&quot; name=&quot;tech-details&quot;&gt;&lt;/a&gt;&lt;/h2&gt; &lt;table align=&quot;right&quot; border=&quot;1&quot; bordercolor=&quot;#ccc&quot; cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; style=&quot;border-collapse:collapse;margin:10px 0 10px 15px;&quot;&gt; &lt;caption&gt;&lt;strong&gt;Mission crew&lt;/strong&gt;&lt;/caption&gt; &lt;thead&gt; &lt;tr&gt; &lt;th scope=&quot;col&quot;&gt;Position&lt;/th&gt; &lt;th scope=&quot;col&quot;&gt;Astronaut&lt;/th&gt; &lt;/tr&gt; &lt;/thead&gt; &lt;tbody&gt; &lt;tr&gt; &lt;td&gt;Commander&lt;/td&gt; &lt;td&gt;Neil A. Armstrong&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Command Module Pilot&lt;/td&gt; &lt;td&gt;Michael Collins&lt;/td&gt; &lt;/tr&gt; &lt;tr&gt; &lt;td&gt;Lunar Module Pilot&lt;/td&gt; &lt;td&gt;Edwin &amp;quot;Buzz&amp;quot; E. Aldrin, Jr.&lt;/td&gt; &lt;/tr&gt; &lt;/tbody&gt; &lt;/table&gt; &lt;p&gt;Launched by a &lt;strong&gt;Saturn V&lt;/strong&gt; rocket from &lt;a href=&quot;http://en.wikipedia.org/wiki/Kennedy_Space_Center&quot; title=&quot;Kennedy Space Center&quot;&gt;Kennedy Space Center&lt;/a&gt; in Merritt Island, Florida on July 16, Apollo 11 was the fifth manned mission of &lt;a href=&quot;http://en.wikipedia.org/wiki/NASA&quot; title=&quot;NASA&quot;&gt;NASA&lt;/a&gt;&amp;#39;s Apollo program. The Apollo spacecraft had three parts:&lt;/p&gt; &lt;ol&gt; &lt;li&gt;&lt;strong&gt;Command Module&lt;/strong&gt; with a cabin for the three astronauts which was the only part which landed back on Earth&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Service Module&lt;/strong&gt; which supported the Command Module with propulsion, electrical power, oxygen and water&lt;/li&gt; &lt;li&gt;&lt;strong&gt;Lunar Module&lt;/strong&gt; for landing on the Moon.&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;After being sent to the Moon by the Saturn V&amp;#39;s upper stage, the astronauts separated the spacecraft from it and travelled for three days until they entered into lunar orbit. Armstrong and Aldrin then moved into the Lunar Module and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Mare_Tranquillitatis&quot; title=&quot;Mare Tranquillitatis&quot;&gt;Sea of Tranquility&lt;/a&gt;. They stayed a total of about 21 and a half hours on the lunar surface. After lifting off in the upper part of the Lunar Module and rejoining Collins in the Command Module, they returned to Earth and landed in the &lt;a href=&quot;http://en.wikipedia.org/wiki/Pacific_Ocean&quot; title=&quot;Pacific Ocean&quot;&gt;Pacific Ocean&lt;/a&gt; on July 24.&lt;/p&gt; &lt;hr/&gt; &lt;p style=&quot;text-align: right;&quot;&gt;&lt;small&gt;Source: &lt;a href=&quot;http://en.wikipedia.org/wiki/Apollo_11&quot;&gt;Wikipedia.org&lt;/a&gt;&lt;/small&gt;&lt;/p&gt;
+		</textarea>
+                 </div>
+  <button type="submit" class="btn btn-default">Simpan</button>
+</form>
+
+	<script>
+	$( document ).ready( function() {
+			$( '#editor1' ).ckeditor(); // Use CKEDITOR.replace() if element is <textarea>.
+			$( '#editable' ).ckeditor(); // Use CKEDITOR.inline().
+		} );
+	</script>
+
+
+          </div>
+        </div><!-- /.row -->
+
+      </div><!-- /#page-wrapper -->
+
+    </div><!-- /#wrapper -->
+
+    <!-- JavaScript -->
+   <script src="js/bootstrap.js"></script>
+
+  </body>
+</html>

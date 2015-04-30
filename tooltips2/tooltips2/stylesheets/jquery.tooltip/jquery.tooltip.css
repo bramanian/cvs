@@ -1,0 +1,46 @@
+div.jquery-gdakram-tooltip { 
+  width: 340px;
+  color: white;
+  font-size: 12px;
+	position: absolute;
+	z-index: 10000;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+div.jquery-gdakram-tooltip div.content { 
+  -moz-border-radius: 1em; 
+  -webkit-border-radius: 1em;
+  background-color: #ffffff;
+  width: 450px;
+  height:auto;
+  float:left;
+  margin-left:-50px;
+  padding: 10px;
+  color:#000;
+}
+
+div.jquery-gdakram-tooltip div.content h1 {
+  font-size: 16px;
+  border-bottom: 1px solid #C4C4C4;
+  padding-bottom: 5px;
+}
+
+div.jquery-gdakram-tooltip div.up_arrow {
+
+}
+
+div.jquery-gdakram-tooltip div.down_arrow {
+  
+}
+
+div.jquery-gdakram-tooltip div.left_arrow {
+  height: 100%;
+}
+
+div.jquery-gdakram-tooltip div.left_arrow {
+
+}
+
+
