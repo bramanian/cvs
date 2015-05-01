@@ -1,8 +1,6 @@
-{{--<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/plugin/editor/src/wysiwyg.js"></script>
-<script type="text/javascript" language="javascript" src="{{URL::to("")}}/plugin/editor/src/wysiwyg-editor.js"></script>
-<link type="text/css"  rel="stylesheet" href="{{URL::to("/")}}/plugin/editor/src/wysiwyg-editor.css">--}}
-{{--<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/js/editor.js"></script>--}}
 <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
+<link href="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
 
 <form class="form form-horizontal" action="{{URL::to("/home/thread")}}" method="POST">
 	<div class="col-md-12">
@@ -22,7 +20,6 @@
 				</select>
 			</div>
 		</div>
-		
 		<div class="form-group">
 			<label class="col-md-2 control-label">Judul</label>
 			<div class="col-md-10">
@@ -36,14 +33,10 @@
 				<button class="btn btn-primary " type="button" id="file-artikel"  data-file="artikel">Upload Photo</button>
 				<p><small> foto ditampikan pada bagian atas isi thread</small></p>
 				<div class="col-md-12"><input type="hidden" id="foto-artikel" name="foto-artikel" value="{{Input::old("foto-artikel")}}"></div>
-				
 			</div>
 		</div>
 		<div class="form-group">
 			<label class="col-md-2 control-label">Isi Thread</label>
-			{{--<div class="col-md-10" style="min-height:350px;" >
-				<textarea  id="editor1" placeholder="Isi Thread" name="isi">{{Input::old("isi")}}</textarea>
-			</div>--}}
 			<div class="col-md-10">
                 <div data-control="wysiwyg">
                     <textarea id="description" placeholder="Isi Thread" name="isi">{{Input::old("isi")}}</textarea>
@@ -57,57 +50,33 @@
             //        filebrowserImageUploadUrl: '/upload/image'
                 });
             </script>
+		</div>
+		<div class="form-group">
+		    <label class="col-md-2 control-label">Tags</label>
+        	<div class="col-md-10">
+        		<style>
+                    #tags{
+                        width: 100% !important;
+                    }
+                </style>
 
+                {{ Form::select('tag[]', $tags, null, ['id' => 'tags', 'multiple'=>'true']) }}
+
+                <script type="text/javascript">
+                    $(function(){
+                        $('#tags').select2();
+                    });
+                </script>
+        	</div>
 		</div>
 	</div>
-	
-	<div class="col-md-10 col-md-offset-2" style="padding-top:20px;">
-		<div class="col-md-12" style="margin:0px; margin-bottom:5px;">
-			<div class="input-group">
-				<select name="data-tag" class="form-control" id="data-tag">
-					@if(isset($tags))
-					@foreach($tags as $tag)
-					<option value="{{$tag->id}}">{{$tag->nama}}</option>
-					@endforeach
-					@endif
-				</select>
-				<span class="input-group-btn">
-					<button class="btn btn-primary" onClick="selectTag()"  type="button">Add</button>
-				</span>
-				</div><!-- /input-group -->
-			</div>
-			<div class="col-md-12 " style="margin:0px; margin-bottom:5px;">
-				<div class="panel panel-primary">
-					<div class="panel-heading text-center">Tag</div>
-					<div class="panel-body" >
-						<ul style="list-unstyled list-inline" style="margin:0px; padding-left:5px; padding-right:5px;" id="list-tag">
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-md-12">
-			<div class="col-md-offset-2 col-md-8 text-center">
-				<button type="submit" class="btn btn-primary" style="padding:7px 30px;"><i class="fa fa-save"></i> Simpan</button>
-			</div>
-		</div>
-	</form>
+	<div class="col-md-12">
+        <div class="col-md-offset-2 col-md-8 text-center">
+            <button type="submit" class="btn btn-primary" style="padding:7px 30px;"><i class="fa fa-save"></i> Simpan</button>
+        </div>
+	</div>
+</form>
 	<script>
-	function selectTag(){
-	var $nama = $("#data-tag").find(':selected').html();
-	var $id=$('#data-tag').val();
-	var $str='<li class="btn btn-xs btn-primary" data-id-kategori="'+$id+'">'+
-		'<button type="button" class="close" data-id-kategori="'+$id+'" onClick="deleteTagPanel(this)'+
-				'"aria-label="Close"><span aria-hidden="true">&times;</span></button>'+
-				'<span >'+$nama+'</span>'+
-				'<input type="hidden" name="tag[]" value="'+$id+'">'+
-			'</li>';
-								$("#list-tag").append($str);
-	}
-	function deleteTagPanel($data){
-	var $id=$($data).attr("data-id-kategori");
-	$("li[data-id-kategori='"+$id+"']").remove();
-	}
 			$("#file").click(function(){
 				var	$folder=$("#file").attr("data-file");
 			var btnUpload=$('#file');

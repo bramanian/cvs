@@ -41,7 +41,8 @@ class ArtikelController extends \BaseController {
 	   $this->setTitle("New Thread");
 	   $this->getBreadcrumbs(array("Home"=>"/home","New Thread"=>""));
 	   $kategoris=Kategori::orderBy("nama","asc")->where("tipe","=","thread")->get();
-	   $tags=Tag::orderBy("nama","asc")->get();
+//	   $tags=Tag::orderBy("nama","asc")->get();
+	   $tags=Tag::lists("nama","id");
 		$this->layout->content=View::make("backend.thread.create",
 											array("kategoris"=>$kategoris,
 											       "tags"=>$tags));
