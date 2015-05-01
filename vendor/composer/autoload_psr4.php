@@ -9,4 +9,5 @@ return array(
     'Zizaco\\Confide\\' => array($vendorDir . '/zizaco/confide/src/Confide'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Jenssegers\\Agent\\' => array($vendorDir . '/jenssegers/agent/src'),
+    'Barryvdh\\Elfinder\\' => array($vendorDir . '/barryvdh/laravel-elfinder/src'),
 );

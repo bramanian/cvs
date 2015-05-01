@@ -1,14 +1,15 @@
-<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/plugin/editor/src/wysiwyg.js"></script>
+{{--<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/plugin/editor/src/wysiwyg.js"></script>
 <script type="text/javascript" language="javascript" src="{{URL::to("")}}/plugin/editor/src/wysiwyg-editor.js"></script>
-<link type="text/css"  rel="stylesheet" href="{{URL::to("/")}}/plugin/editor/src/wysiwyg-editor.css">
-<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/js/editor.js"></script>
+<link type="text/css"  rel="stylesheet" href="{{URL::to("/")}}/plugin/editor/src/wysiwyg-editor.css">--}}
+{{--<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/js/editor.js"></script>--}}
+<script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
+
 <form class="form form-horizontal" action="{{URL::to("/home/thread")}}" method="POST">
 	<div class="col-md-12">
 		<div class="form-group">
 			<label class="col-md-2 control-label">Kategori</label>
 			<div class="col-md-10">
 				<select  class="form-control" name="kategori">
-					
 					@if(isset($kategoris))
 					@foreach($kategoris as  $kategori)
 					@if(Input::old("kategori")==$kategori)
@@ -40,9 +41,23 @@
 		</div>
 		<div class="form-group">
 			<label class="col-md-2 control-label">Isi Thread</label>
-			<div class="col-md-10" style="min-height:350px;" >
+			{{--<div class="col-md-10" style="min-height:350px;" >
 				<textarea  id="editor1" placeholder="Isi Thread" name="isi">{{Input::old("isi")}}</textarea>
-			</div>
+			</div>--}}
+			<div class="col-md-10">
+                <div data-control="wysiwyg">
+                    <textarea id="description" placeholder="Isi Thread" name="isi">{{Input::old("isi")}}</textarea>
+                </div>
+            </div>
+
+            <script>
+                CKEDITOR.replace('description', {
+                    height: 400,
+                    filebrowserBrowseUrl: '/elfinder/ckeditor4'
+            //        filebrowserImageUploadUrl: '/upload/image'
+                });
+            </script>
+
 		</div>
 	</div>
 	

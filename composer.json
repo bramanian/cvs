@@ -8,7 +8,8 @@
 		"laravel/framework": "4.2.*",
 		"zizaco/confide": "~4.0@dev",
 		"frozennode/administrator": "dev-master",
-		"jenssegers/agent": "~2.1"
+		"jenssegers/agent": "~2.1",
+		"barryvdh/laravel-elfinder": "~0.2"
 	},
 	"autoload": {
 		"classmap": [
