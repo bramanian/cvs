@@ -1,6 +1,6 @@
-<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/plugin/editor/src/wysiwyg.js"></script>
+{{--<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/plugin/editor/src/wysiwyg.js"></script>
 <script type="text/javascript" language="javascript" src="{{URL::to("")}}/plugin/editor/src/wysiwyg-editor.js"></script>
-<link type="text/css"  rel="stylesheet" href="{{URL::to("/")}}/plugin/editor/src/wysiwyg-editor.css">
+<link type="text/css"  rel="stylesheet" href="{{URL::to("/")}}/plugin/editor/src/wysiwyg-editor.css">--}}
 
 <div class="content-fluid" style="padding-top:20px;">
 @include("frontend.thread.leftmenu")
@@ -27,13 +27,26 @@
 	@if(Session::has("success"))
 		<h4 class="text-center alert-success">{{Session::get("success")}}</h4>
 	@endif
-  {{ HTML::ul($errors->all(),array("class"=>"alert-danger list-unstyled")) }}	
+  {{ HTML::ul($errors->all(),array("class"=>"alert-danger list-unstyled")) }}
+
+  <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
+
 	{{Form::open(array('class' => 'form-horizontal', 'method' => 'put', 'action' => array('KomentarController@postReply',$id)))}}
 	  <div class="panel panel-default"> 
 	 <div class="panel-footer">Komentar : <span class="text-capitalize">{{$judul}}</span></div>
 	  <div class="panel-body" style="font-size:12pt;">
-	   <textarea class="form-control" name="komentar" id="editor1">{{Input::old('komentar')}}</textarea>
+        <div data-control="wysiwyg">
+            <textarea id="description" name="komentar">{{Input::old("komentar")}}</textarea>
+        </div>
+	   {{--<textarea class="form-control" name="komentar" id="editor1">{{Input::old('komentar')}}</textarea>--}}
 	   <input type="hidden" value="{{$url}}" name="url"/>
+	    <script>
+           CKEDITOR.replace('description', {
+               height: 400,
+               filebrowserBrowseUrl: '/elfinder/ckeditor4'
+       //        filebrowserImageUploadUrl: '/upload/image'
+           });
+       </script>
 	  </div>
 	  <div class="panel-footer">
         <br>
@@ -69,8 +82,6 @@ padding-bottom:20px;
 }
 </style>
 
-
-
 </div>
 
-<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/js/editor.js"></script>
+{{--<script type="text/javascript"  language="javascript" src="{{URL::to("")}}/js/editor.js"></script>--}}
