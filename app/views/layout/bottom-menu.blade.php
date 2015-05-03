@@ -35,9 +35,9 @@
 			<?php }?>
 			
 	     	<?php if(KomentarController::getController(Route::currentRouteAction())=="GuideController") {?>
-			<li class=""><a href=" #<?php echo URL::to("/") ?>/guide">CONTACT US</a></li>
+			<li class=""><a href=" <?php echo URL::to("contactus") ?>">CONTACT US</a></li>
 			<?php }else{?>
-			<li><a href=" #<?php echo URL::to("/") ?>/guide">CONTACT US</a></li>
+			<li><a href=" <?php echo URL::to("contactus") ?>">CONTACT US</a></li>
 			<?php }?>			
 		</ul>
 	</div>
