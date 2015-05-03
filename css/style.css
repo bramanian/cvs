@@ -1783,7 +1783,7 @@ width:400px;
 
 
 .tooltip-1 {
-	display:none;
+	/*display:none;
 	position:absolute;
 	border:1px solid gray;
 	background-color:white;
@@ -1791,7 +1791,7 @@ width:400px;
 	padding:2px;
 	color:gray;
 	font-size:10px;
-	z-index:1000;
+	z-index:1000;*/
 }
 
 .breadcrumb-blank{
