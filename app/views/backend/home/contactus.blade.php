@@ -22,7 +22,7 @@
 		</div>
 		<div class="form-group">
 			<label>Message <red>*</red></label>
-			<textarea name="message" placeholder="Enter message..." class="form-control" rows="8"></textarea>
+			<textarea name="content" placeholder="Enter message..." class="form-control" rows="8"></textarea>
 		</div>
 		<div class="form-group">
 			<input type="submit" value="Submit" class="btn btn-primary" />

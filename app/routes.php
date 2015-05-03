@@ -320,7 +320,8 @@ Route::get("facebook", function ()
     }
 });
 
-Route::get('/contactus', 'ContactController@contactus');
+Route::get('contactus', 'ContactController@contactus');
+Route::post('contactus', 'ContactController@send');
 
 // Confide routes
 

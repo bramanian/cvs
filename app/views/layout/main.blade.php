@@ -29,7 +29,9 @@
               </div>
             </div>
             <div class=" col-md-10 col-md-offset-1 content-md-01">
-              
+              @if (Session::has("success"))
+                <h4 class="text-capitalize alert-success">{{Session::get("success")}}</h4>
+              @endif
               <?php echo $content; ?>
             </div>
           </div>
