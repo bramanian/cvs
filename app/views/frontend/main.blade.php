@@ -138,18 +138,18 @@
 											<div class="col-md-5 padding-margin-o">
 												<h1 class="follow-us-title padding-margin-o" style="margin-top:35px;">Follow Us</h1>
 											</div>
-											<div class="col-md-7 padding-margin-o" >
+											<div class="col-md-7 padding-margin-o pull-right">
 												<a href="https://www.facebook.com/solusiibu" class="btn btn-primary btn-md follow-us-facebook" style="width:90px; float:left; margin-right:5px;"><i class="fa fa-facebook-official fa-2x white"></i> <br>
 													<center class="white" id="facebook-like-count">0</center>
 												</a>
-												<a href="https://twitter.com/solusimencuci" class="btn btn-primary btn-md follow-us-twitter " style="width:90px;"><i class="fa fa-twitter fa-2x white"></i> <br>
+												<a href="https://twitter.com/solusimencuci" class="btn btn-primary btn-md follow-us-twitter pull-right" style="width:90px;"><i class="fa fa-twitter fa-2x white"></i> <br>
 													<center class="white" id="twitter-count">0</center>
 												</a>
 											</div>
 										</div>
 										
 										<div class="col-md-12 padding-margin-o" style="margin-top:10px;" >
-											<img src="img/image3.png" class="img-responsive">
+											<img src="img/image3.png" class="img-responsive pull-right">
 										</div>
 									</div>
 								</div>
