@@ -145,7 +145,7 @@ class GuideController extends \BaseController {
                 $datakategori = "Washing Experience";
                 break;
             case "amazingresult":
-                $datakategori = "mazing Result";
+                $datakategori = "Amazing Result";
                 break;
             case "allaboutfabric":
                 $datakategori = "Allabout Fabric";
