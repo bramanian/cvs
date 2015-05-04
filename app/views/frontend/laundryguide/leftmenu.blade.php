@@ -23,9 +23,9 @@
 		@endif		
 
 				@if($kategori =="tipstrik" ||$kategori =="4")
-              <li class="tipstrik"><a href="{{URL::action('GuideController@tipstrik')}}">Tips & Trick <div class="block"></div></a></li>
+              <li class="tipstrik"><a href="{{URL::action('GuideController@tipstrik')}}">Tips & Tricks <div class="block"></div></a></li>
 		@else
-             <li class="tipstrik"><a href="{{URL::action('GuideController@tipstrik')}}">Tips & Trick</a></li>
+             <li class="tipstrik"><a href="{{URL::action('GuideController@tipstrik')}}">Tips & Tricks</a></li>
 		@endif	
 
    @else
