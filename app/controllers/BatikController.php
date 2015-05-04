@@ -66,7 +66,7 @@ class BatikController extends \BaseController {
 	$tags=Tagging::where("id_tulisan","=",$tips->id)->where("tipe","=","batik")
 	               ->join("tag","tag.id","=","tagging.id_tag")->get();	
      $content=View::make("frontend.batik.contentshow",array("tips"=>$tips,"tags"=>$tags))->render();
-	 return View::make('layout.main',array("content"=>$content,"breadcrumbs"=>array("Home"=>"/","Attack Zone"=>"/zone","Batik"=>"/batik",$tips->judul=>""))); 
+	 return View::make('layout.main',array("content"=>$content,"breadcrumbs"=>array("Home"=>"/","Attack Zone"=>"/zone","Love Batik"=>"/batik")));
    }	
    
       public static  function getTipsRelated($id){
