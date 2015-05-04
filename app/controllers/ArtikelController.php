@@ -281,7 +281,7 @@ class ArtikelController extends \BaseController {
 
         }
 
-        return View::make('layout.main', array("content" => $content, "breadcrumbs" => array("Home" => "/", "Smart Moms" => "/smart")));
+        return View::make('layout.main', array("content" => $content, "breadcrumbs" => array("Home" => "/", "Smart Mom Club" => "/smart")));
 
 
     }
@@ -300,7 +300,7 @@ class ArtikelController extends \BaseController {
 
         $content = View::make("frontend.thread.all", array("artikels" => $artikels, "taggings" => $taggings))->render();
 
-        return View::make('layout.main', array("content" => $content, "breadcrumbs" => array("Home" => "/", "Smart Moms" => "/smart", "All Thread" => "")));
+        return View::make('layout.main', array("content" => $content, "breadcrumbs" => array("Home" => "/", "Smart Mom Club" => "/smart", "All Thread" => "")));
 
     }
 
@@ -335,7 +335,7 @@ class ArtikelController extends \BaseController {
             ->select("tag.nama as nama", "tagging.id_tulisan as id")->get();
 
 
-        $content = View::make("frontend.thread.all", array("artikels" => $artikels, "taggings" => $taggings, "breadcrumbs" => array("Home" => "/", "Smart Moms" => "/smart", $this::getJudul($judul) => "")))->render();
+        $content = View::make("frontend.thread.all", array("artikels" => $artikels, "taggings" => $taggings, "breadcrumbs" => array("Home" => "/", "Smart Mom Club" => "/smart", $this::getJudul($judul) => "")))->render();
 
         return View::make('layout.main', array("content" => $content));
 
@@ -371,7 +371,7 @@ class ArtikelController extends \BaseController {
             ->select("tag.nama as nama", "tagging.id_tulisan as id")->get();
 
 
-        $content = View::make("frontend.thread.all", array("artikels" => $artikels, "taggings" => $taggings, "breadcrumbs" => array("Home" => "/", "Smart Moms" => "/smart", $this::getJudul($judul) => "")))->render();
+        $content = View::make("frontend.thread.all", array("artikels" => $artikels, "taggings" => $taggings, "breadcrumbs" => array("Home" => "/", "Smart Mom Club" => "/smart", $this::getJudul($judul) => "")))->render();
 
         return View::make('layout.main', array("content" => $content));
 
