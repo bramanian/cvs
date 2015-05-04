@@ -31,7 +31,7 @@ class PromoeventController extends \BaseController {
 	}else{
 	$content=View::make("frontend.promoevent.content",array("tips"=>$tips))->render();
 	}
-	 return View::make('layout.main',array("content"=>$content,"breadcrumbs"=>array("Home"=>"/","Promo & Event"=>"")));		
+	 return View::make('layout.main',array("content"=>$content,"breadcrumbs"=>array("Home"=>"/","Attack Zone"=>"/zone", "Promo & Event"=>"")));
 	
 	}
 
