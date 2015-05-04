@@ -57,7 +57,7 @@ class PromoeventController extends \BaseController {
 	                 ->where("judul","like","%".$judul."%")->increment("viewer",1);
 
      $content=View::make("frontend.promoevent.contentshow",array("tips"=>$tips))->render();				   
-	 return View::make('layout.main',array("content"=>$content,"breadcrumbs"=>array("Home"=>"/","Promo & Event"=>"/promoevent"))); 
+	 return View::make('layout.main',array("content"=>$content,"breadcrumbs"=>array("Home"=>"/","Attack Zone"=>"/zone","Promo & Event"=>"/promoevent")));
 
    }	
    
