@@ -89,8 +89,8 @@ class TipsController extends \BaseController {
 	$tags=Tagging::where("id_tulisan","=",$tips->id)->where("tipe","=","tips")
 	               ->join("tag","tag.id","=","tagging.id_tag")->get();	
      $content=View::make("frontend.smarttips.contentshow",array("tips"=>$tips,"tags"=>$tags))->render();
-	 return View::make('layout.main',array("content"=>$content,"breadcrumbs"=>array("Home"=>"/","Smart Tips"=>"/tips"))); 
-   }	
+	  return View::make('layout.main',array("content"=>$content,"breadcrumbs"=>array("Home"=>"/","Smart Tips"=>"/tips", $tips->nama_kategori=>"")));
+   }
    
       public static  function getTipsRelated($id){
 	
