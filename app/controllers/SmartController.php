@@ -15,7 +15,7 @@ class SmartController extends \BaseController {
 		                                 join("kategori","kategori.id","=","artikel.id_kategori")
 		                                 ->orderBy("created_at","desc")
 										 ->selectRaw("artikel.judul as judul, artikel.id as id, artikel.created_at as created_at, kategori.small_image as small_image")->paginate(10);
-		$this->layout->breadcrumbs=array("Home"=>"/","Smart Moms"=>"");
+		$this->layout->breadcrumbs=array("Home"=>"/","Smart Mom Club"=>"");
 		    $this->layout->content=View::make("frontend.smartmom.content",array("hothreads"=>$hothread))->render();
 	 
 	}
