@@ -1,7 +1,7 @@
 
 <div class="content-fluid" style="padding-top:20px;">
 	<div class="col-md-12">
-		<img src="{{URL::to('/');}}/img/smart/image-08.jpg" class="img-responsive">
+		<img src="{{URL::to('/');}}/img/smart/image-08.jpg" class="img-responsive" style="width: 100%">
 	</div>
 @include("frontend.attackzone.leftmenu",array("kategori"=>"batik"))
 
