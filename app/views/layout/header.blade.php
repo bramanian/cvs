@@ -2,7 +2,7 @@
 	<div class="col-xs-12 col-md-12" style="position:absolute; bottom:10px; left:0px;">
 		@if(!Auth::check())
 		<div class="col-xs-12 col-md-9">
-			<img src="{{URL::to("/")}}/img/solusi-ibuattack.png" style="cursor:pointer" onclick="window.location.href='{{URL::to('/')}}'" class="logo-solusi-ibuattack">
+			<img src="{{URL::to("/")}}/img/solusi-ibuattack.png" style="cursor:pointer;position: absolute;top:-20px" onclick="window.location.href='{{URL::to('/')}}'" class="logo-solusi-ibuattack">
 		</div>
 		<div class="col-xs-10 col-xs-offset-2 col-md-3 col-md-offset-0 login-signup-top" style="overflow-x:hidden;"  >
 			<div class="col-xs-12 col-md-12" style="padding-bottom:5px; margin-left:10px;">
