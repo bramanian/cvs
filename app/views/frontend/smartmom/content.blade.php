@@ -53,12 +53,14 @@
   </div>
 </div>
 </div>
-</div>
-
-</div>
-
-</div>
 <img   src="{{URL::to('/')}}/img/smart/gabung.jpg"  class="bottom-img-smartmom" onclick="window.location.href='{{URL::to('/home/thread/create')}}'" >
+<div class="clearfix"></div>
+<br/>
+</div>
+
+</div>
+
+</div>
 <script>
 
 
