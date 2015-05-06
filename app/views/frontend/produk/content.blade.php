@@ -18,7 +18,7 @@
 		  <div class="col-md-10 col-md-offset-1 inner-desc-1 " style="">
 		  <div class="col-xs-md-12 text-right"><a class="btn btn-close" ><i class="fa fa-2x fa-times"></i></a></div>
 				<div class="media">
-				  <div class="media-left ">
+				  <div class="media-left " style="padding-right:20px">
 					  <img  src="{{URL::to('img/produk/small/produk-01.png')}}">
 				  </div>
 				  <div class="media-body">
