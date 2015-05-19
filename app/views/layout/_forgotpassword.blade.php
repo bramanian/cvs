@@ -6,7 +6,7 @@ forgot- password
 		
 			<div class="modal-form-login">
 			<div class="col-md-11">
-              <center><h1  style="color:#1E6397; font-weight:bold;  font-size:23pt;">Lupa Password</h1></center>
+              <center><h1  style="color:#1E6397; font-weight:bold;  font-size:23pt;">Forgot Password</h1></center>
 
 				<div class="form-group">				
 				<p class="text-center " >
